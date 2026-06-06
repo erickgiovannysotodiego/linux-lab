@@ -1,0 +1,13 @@
+" ~/.vimrc - Configuración de Vim para desarrollo
+syntax on
+set number
+set relativenumber
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set mouse=a
