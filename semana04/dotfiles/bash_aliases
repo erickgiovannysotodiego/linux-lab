@@ -1,0 +1,25 @@
+# ~/.bash_aliases - Atajos de teclado personalizados
+
+# Navegación y listado rápido
+alias ..="cd .."
+alias ...="cd ../.."
+alias ll="ls -lAh --color=auto"
+alias grep="grep --color=auto"
+
+# Atajos de Git rápidos
+alias gst="git status"
+alias gaa="git add ."
+alias gcm="git commit -m"
+alias gpo="git push origin main"
+
+# Función automatizada para ver el clima de Oruro
+clima() {
+    curl -s wttr.in/Oruro?0Q
+}
+
+# Mensaje de bienvenida del sistema
+echo "====================================="
+echo "¡Bienvenido de vuelta a la terminal!"
+echo "Fecha: \$(date)"
+echo "Espacio en disco: \$(df -h / | awk 'NR==2 {print \$5}') ocupado."
+echo "====================================="
