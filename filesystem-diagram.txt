@@ -1,0 +1,32 @@
+Sistema de Archivos Linux
+=========================
+/ (root)
+├── home/
+│   ├── erickgiovannysotodiego/
+│   │   ├── Documentos/
+│   │   ├── Descargas/
+│   │   └── Imagenes/
+├── etc/
+│   ├── passwd
+│   ├── group
+│   ├── hosts
+│   └── ssh/
+│       └── sshd_config
+├── var/
+│   ├── log/
+│   │   ├── syslog
+│   │   └── auth.log
+│   ├── www/
+│   └── cache/
+├── usr/
+│   ├── bin/ -> (symlink a /bin)
+│   │   ├── python3
+│   │   ├── git
+│   │   └── vim
+├── tmp/ (archivos temporales)
+├── boot/
+│   ├── vmlinuz (kernel)
+│   └── grub/
+└── dev/
+    ├── sda (disco principal)
+    └── null (agujero negro)
