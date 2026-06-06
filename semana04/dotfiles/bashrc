@@ -1,0 +1,43 @@
+# ~/.bashrc Configuración del entorno de trabajo
+# Repositorio: github.com/erickgiovannysotodiego/linux-lab
+
+# Si la shell no es interactiva, no hacer nada
+case $- in
+    *i*) ;;
+    *) return;;
+esac
+
+# Historial optimizado
+HISTSIZE=5000
+HISTFILESIZE=10000
+HISTCONTROL=ignoredups:ignorespace
+shopt -s histappend
+
+# Opciones de shell
+shopt -s checkwinsize
+shopt -s cdspell
+shopt -s globstar
+
+# Variables de entorno
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+export LANG='es_ES.UTF-8'
+
+# PATH personalizado
+export PATH="$HOME/scripts:$PATH"
+
+# Prompt PS1 personalizado con colores (Verde: usuario@host, Azul: directorio)
+PS1='\[\e[1;32m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '
+
+# Cargar aliases si existen
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Autocompletado de comandos
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  fi
+fi
